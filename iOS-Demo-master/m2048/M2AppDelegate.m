@@ -28,7 +28,7 @@
   [Leanplum start];
     
   [Amplitude instance].trackingSessionEvents = YES;
-  [[Amplitude instance] initializeApiKey:@"cd6312957e01361e6c876290f26d9104"];
+  [[Amplitude instance] initializeApiKey:@"c7cc69784992417c5b758391d9b8d993"];
 
   // Add action for remind later.
   UIMutableUserNotificationAction *laterAction = [[UIMutableUserNotificationAction alloc] init];
@@ -121,7 +121,7 @@
         forRemoteNotification:(NSDictionary *)notification completionHandler:(void(^)())completionHandler
 {
     NSLog(@"Received push notification: %@, identifier: %@", notification, identifier); // iOS 8
-    [[Amplitude instance] initializeApiKey:@"cd6312957e01361e6c876290f26d9104"];
+    [[Amplitude instance] initializeApiKey:@"c7cc69784992417c5b758391d9b8d993"];
     [[Amplitude instance] logEvent:@"Opened Remote Notification"];
 
     completionHandler();
@@ -132,7 +132,7 @@
 {
   if ([notification.category isEqualToString:@"reminder_category_id"])
   {
-    [[Amplitude instance] initializeApiKey:@"cd6312957e01361e6c876290f26d9104" userId:nil];
+    [[Amplitude instance] initializeApiKey:@"c7cc69784992417c5b758391d9b8d993" userId:nil];
     [[Amplitude instance] logEvent:@"Local Notification Action" withEventProperties:@{@"Action": identifier}];
 
     if ([identifier isEqualToString:@"later_action_id"])
