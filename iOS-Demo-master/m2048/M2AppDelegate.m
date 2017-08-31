@@ -8,11 +8,25 @@
 
 #import "M2AppDelegate.h"
 #import "Amplitude.h"
+#import <Leanplum/Leanplum.h>
+
 
 @implementation M2AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#ifdef DEBUG
+    LEANPLUM_USE_ADVERTISING_ID;
+    [Leanplum setAppId:@"app_riJJ14FXZlXoX4PAX9Rt3ymJsauMX2gnTIENyz9pw7s"
+    withDevelopmentKey:@"dev_fjNhVnKYJeZgk3ZKnBZjoshw1J3ucpKDqx9x16EIfnw"];
+#else
+    [Leanplum setAppId:@"app_riJJ14FXZlXoX4PAX9Rt3ymJsauMX2gnTIENyz9pw7s"
+     withProductionKey:@"prod_CGpJpTDa8DgSkqZZMwmgqlCz7bEgeTwu1L3o4uOtiDY"];
+#endif
+
+  [Leanplum syncResourcePaths:@[@"MyResources/.*"] excluding:nil async:YES];
+  [Leanplum start];
+    
   [Amplitude instance].trackingSessionEvents = YES;
   [[Amplitude instance] initializeApiKey:@"cd6312957e01361e6c876290f26d9104"];
 
@@ -33,15 +47,15 @@
   [category setActions:@[laterAction, playAction] forContext:UIUserNotificationActionContextDefault];
   NSSet* categories = [NSSet setWithArray:@[category]];
 
-  NSUInteger types = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge;
-  if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-    NSLog(@"Requesting permission for push notifications..."); // iOS 8
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
-    [UIApplication.sharedApplication registerUserNotificationSettings:settings];
-  } else {
-    NSLog(@"Registering device for push notifications..."); // iOS 7 and earlier
-    [UIApplication.sharedApplication registerForRemoteNotificationTypes:types];
-  }
+//  NSUInteger types = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge;
+//  if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+//    NSLog(@"Requesting permission for push notifications..."); // iOS 8
+//    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
+//    [UIApplication.sharedApplication registerUserNotificationSettings:settings];
+//  } else {
+//    NSLog(@"Registering device for push notifications..."); // iOS 7 and earlier
+//    [UIApplication.sharedApplication registerForRemoteNotificationTypes:types];
+//  }
 
   return YES;
 }

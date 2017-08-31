@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0598856F35295B672E27C11F /* libPods-m2048.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBDFA6EC43B1E0EF8F8DFEA /* libPods-m2048.a */; };
+		00E66FB7B9986E26E0BE180D /* libPods-m2048.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6DA0B57763E5D3E1B76B62 /* libPods-m2048.a */; };
 		2443DC5618D662CA00C920C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2443DC5518D662CA00C920C1 /* Foundation.framework */; };
 		2443DC5818D662CA00C920C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2443DC5718D662CA00C920C1 /* CoreGraphics.framework */; };
 		2443DC5A18D662CA00C920C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2443DC5918D662CA00C920C1 /* UIKit.framework */; };
@@ -93,9 +93,9 @@
 		24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SettingsDetailViewController.m; sourceTree = "<group>"; };
 		24C4517F18E265390001FCFD /* M2Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Overlay.h; sourceTree = "<group>"; };
 		24C4518018E265390001FCFD /* M2Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Overlay.m; sourceTree = "<group>"; };
-		66737970F26BA9ED648F25FB /* Pods-m2048.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m2048.debug.xcconfig"; path = "Pods/Target Support Files/Pods-m2048/Pods-m2048.debug.xcconfig"; sourceTree = "<group>"; };
-		9FBDFA6EC43B1E0EF8F8DFEA /* libPods-m2048.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-m2048.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD3D8E59A564A0CB5245C664 /* Pods-m2048.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m2048.release.xcconfig"; path = "Pods/Target Support Files/Pods-m2048/Pods-m2048.release.xcconfig"; sourceTree = "<group>"; };
+		403443401DDB7E49F5C9CBAA /* Pods-m2048.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m2048.release.xcconfig"; path = "Pods/Target Support Files/Pods-m2048/Pods-m2048.release.xcconfig"; sourceTree = "<group>"; };
+		904E61D1D4202EF18652FFC2 /* Pods-m2048.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m2048.debug.xcconfig"; path = "Pods/Target Support Files/Pods-m2048/Pods-m2048.debug.xcconfig"; sourceTree = "<group>"; };
+		BC6DA0B57763E5D3E1B76B62 /* libPods-m2048.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-m2048.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				2443DC5A18D662CA00C920C1 /* UIKit.framework in Frameworks */,
 				2443DC5C18D662CA00C920C1 /* SpriteKit.framework in Frameworks */,
 				2443DC5618D662CA00C920C1 /* Foundation.framework in Frameworks */,
-				0598856F35295B672E27C11F /* libPods-m2048.a in Frameworks */,
+				00E66FB7B9986E26E0BE180D /* libPods-m2048.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6E5C22AC252B92072EEFF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				904E61D1D4202EF18652FFC2 /* Pods-m2048.debug.xcconfig */,
+				403443401DDB7E49F5C9CBAA /* Pods-m2048.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2443DC4918D662CA00C920C1 = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +140,7 @@
 				2443DC8118D662CA00C920C1 /* m2048Tests */,
 				2443DC5418D662CA00C920C1 /* Frameworks */,
 				2443DC5318D662CA00C920C1 /* Products */,
-				3EF74E365C0D6B0F48AC221E /* Pods */,
+				0E6E5C22AC252B92072EEFF0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,7 +161,7 @@
 				2443DC5918D662CA00C920C1 /* UIKit.framework */,
 				2443DC5B18D662CA00C920C1 /* SpriteKit.framework */,
 				2443DC7B18D662CA00C920C1 /* XCTest.framework */,
-				9FBDFA6EC43B1E0EF8F8DFEA /* libPods-m2048.a */,
+				BC6DA0B57763E5D3E1B76B62 /* libPods-m2048.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -273,15 +282,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3EF74E365C0D6B0F48AC221E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				66737970F26BA9ED648F25FB /* Pods-m2048.debug.xcconfig */,
-				CD3D8E59A564A0CB5245C664 /* Pods-m2048.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,11 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2443DC8B18D662CA00C920C1 /* Build configuration list for PBXNativeTarget "m2048" */;
 			buildPhases = (
-				6713CEFD0DF99E54FB01A793 /* Check Pods Manifest.lock */,
+				AF07A0A568BE60072218BE46 /* [CP] Check Pods Manifest.lock */,
 				2443DC4E18D662CA00C920C1 /* Sources */,
 				2443DC4F18D662CA00C920C1 /* Frameworks */,
 				2443DC5018D662CA00C920C1 /* Resources */,
-				5099852974FDE90A9162A8A4 /* Copy Pods Resources */,
+				51462DDDD59D00FA9200A323 /* [CP] Embed Pods Frameworks */,
+				6AA6B50FBB50842ABDF37EE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,14 +382,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5099852974FDE90A9162A8A4 /* Copy Pods Resources */ = {
+		51462DDDD59D00FA9200A323 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-m2048/Pods-m2048-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AA6B50FBB50842ABDF37EE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,19 +412,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-m2048/Pods-m2048-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6713CEFD0DF99E54FB01A793 /* Check Pods Manifest.lock */ = {
+		AF07A0A568BE60072218BE46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-m2048-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -554,7 +573,7 @@
 		};
 		2443DC8C18D662CA00C920C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66737970F26BA9ED648F25FB /* Pods-m2048.debug.xcconfig */;
+			baseConfigurationReference = 904E61D1D4202EF18652FFC2 /* Pods-m2048.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -574,7 +593,7 @@
 		};
 		2443DC8D18D662CA00C920C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD3D8E59A564A0CB5245C664 /* Pods-m2048.release.xcconfig */;
+			baseConfigurationReference = 403443401DDB7E49F5C9CBAA /* Pods-m2048.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
